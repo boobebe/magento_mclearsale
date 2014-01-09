@@ -36,7 +36,7 @@ class Prestige_Clearsale_Block_Clearsale extends Mage_Adminhtml_Block_Template
 		        	$_clearsale['Dados_Pedido']['PedidoID'] = $_order->getIncrementId();
 		        	$_clearsale['Dados_Pedido']['Data'] = str_ireplace(array(' ','/'), array('+','-'), $_order->getCreatedAtDate());
 		        	$_clearsale['Dados_Pedido']['IP'] = $_order->getRemoteIp();
-		        	$_clearsale['Dados_Pedido']['Total'] = number_format($_order->getBaseGrandTotal(), 2, '', '');
+		        	$_clearsale['Dados_Pedido']['Total'] = number_format($_order->getBaseGrandTotal(), 2, ',', '');
 		        		        
 			        switch ($metodoPag) {
 			        	case 'Maxima_Cielo_Cc':
@@ -183,7 +183,7 @@ class Prestige_Clearsale_Block_Clearsale extends Mage_Adminhtml_Block_Template
 	        		        $_clearsale['Dados_Item']['Item_ID_'.$i] = substr($item->getSku(), 0, 50);
 	        		        $_clearsale['Dados_Item']['Item_Nome_'.$i] = substr(strtoupper(str_ireplace(' ', '+', str_replace($array_from, $array_to, $item->getName()))), 0, 150);
 	        		        $_clearsale['Dados_Item']['Item_Qtd_'.$i] = $item_qty;
-	        		        $_clearsale['Dados_Item']['Item_Valor_'.$i] = number_format(($item_price/100),2,'','');
+	        		        $_clearsale['Dados_Item']['Item_Valor_'.$i] = number_format(($item_price/100),2,',','');
 	        		        
 	        		        $i++;
 			        	}
