@@ -211,7 +211,9 @@ class Prestige_Clearsale_Block_Clearsale extends Mage_Adminhtml_Block_Template
 	        			}
 	        		}
 	        		
-	        		$html_meio = '<br /><iframe height="85" frameborder="0" width="280" scrolling="no" src="'. $url .'">no"><p>Seu Browser não suporta iframes</p></iframe>';
+	        		$html_meio = '<br />';
+	        		$html_meio .= '<button id="clear_sale_button" title="Verificar Score ClearSale" type="button" class="scalable " onclick="document.getElementById(\'clearsale\').src=\'' . $url . '\';  document.getElementById(\'clear_sale_button\').style.display=\'none\'" style=""><span><span><span>Verificar Score ClearSale</span></span></span></button>' ;
+	        		$html_meio .= '<iframe id="clearsale" height="85" frameborder="0" width="280" scrolling="no" src="">no"><p>Seu Browser não suporta iframes</p></iframe>';
 	        		
 	        		
 	        		return $html.$html_meio;
