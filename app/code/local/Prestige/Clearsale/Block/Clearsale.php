@@ -196,7 +196,7 @@ class Prestige_Clearsale_Block_Clearsale extends Mage_Adminhtml_Block_Template
 	                {
 	        			$urlClearsale = "http://www.clearsale.com.br/start/Entrada/EnviarPedido.aspx";
 	        		}else{
-	        			$urlClearsale = "http://homologacao.clearsale.com.br/integracaov2/FreeClearSale/frame.aspx";
+	        			$urlClearsale = "http://homolog.clearsale.com.br/start/entrada/enviarpedido.aspx";
 	        			
 	        		}
 	        		
